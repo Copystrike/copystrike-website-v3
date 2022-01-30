@@ -40,12 +40,5 @@ pipeline {
                 }
             }
         }
-
-        post {
-            always {
-                echo "Removing dangling images..."
-                sh 'docker image prune -a'
-            }
-        }
     }
 }
