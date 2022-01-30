@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo "Pushing to private registry docker.copystrike.dev..."
                 script {
-                    docker.withRegistry('https://docker.copystrike.dev', "${env.registryCredentials}") {
+                    docker.withRegistry('https://docker.copystrike.dev', "${env.registryCredential}") {
                         dockerImage.push("${version}")
                         dockerImage.push("latest")
                     }
