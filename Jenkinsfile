@@ -2,6 +2,10 @@ def version = "1.0.${env.BUILD_NUMBER}"
 pipeline {
     agent any
     
+    options {
+        skipDefaultCheckout(true) // To make cleaningWS work
+    }
+
     environment {
         dockerImage = ''
         registry = "docker.copystrike.dev/cpsk-website:${version}"
@@ -9,6 +13,12 @@ pipeline {
     }
 
     stages {
+        stage('CleanWs') {
+            steps {
+                echo "Cleaning workspace..."
+                cleanWs()
+            }
+        }
         stage('build') {
             steps {
                 echo "Builing version ${version}"
