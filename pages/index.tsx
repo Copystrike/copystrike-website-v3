@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     <div className="flex flex-col sm:scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-300 dark:scrollbar-thumb-blue-100 dark:scrollbar-track-gray-700">
       <div className='mt-[23vh] px-2 text-center'>
         <h1 className='mb-1 text-3xl font-bold text-center md:text-4xl'>Hey, I&apos;m Nick.</h1>
-        <p className='mt-2 md:text-lg font-lato'>I am a software engineer who spends most of its time behind a computer learning about everything tech and programming.</p>
+        <p className='mt-2 md:text-lg font-lato'>As a passionate Fullstack engineer, I love spending my days immersed in the exciting world of tech and programming, constantly learning and exploring new ideas.</p>
         <div className='self-center mt-5 text-center'>
           <h1 className='text-xl italic font-light'>Ways to get in touch with me</h1>
           <SocialMedia />
